@@ -1,0 +1,79 @@
+import aiohttp
+import asyncio
+import json
+import typing
+
+
+class MsgSender:
+    """A class to send simply send messages via Google Chat Webhooks."""
+
+    def __init__(self, msg: str, google_chat_webhook_urls: typing.Union[str, list]):
+        """Send a message to one or multiple google chat webhook urls.
+        It uses `aiohttp` and `asyncio` to send the requests in an async matter.
+
+        Args:
+            msg (str): [description]
+            google_chat_webhook_urls (typing.Union[str, list]): [description]
+        """
+        self.google_chat_webhook_urls = google_chat_webhook_urls
+        self.msg = msg
+
+    # -------------------------------- #
+    # ---------- Properties ---------- #
+    # -------------------------------- #
+
+    @property
+    def google_chat_webhook_urls(self):
+        return self._google_chat_webhook_urls
+
+    @google_chat_webhook_urls.setter
+    def google_chat_webhook_urls(self, url):
+        """Will convert 
+
+        Args:
+            url ([type]): [description]
+        """
+        if isinstance(url, list):
+            self._google_chat_webhook_urls = url
+        else:
+            self._google_chat_webhook_urls = [url]
+
+    # ------------------------------------- #
+    # ---------- Private Methods ---------- #
+    # ------------------------------------- #
+
+    async def _send_to_google_url(self, session, url):
+
+        bot_message = {"text": self.msg}
+
+        message_headers = {"Content-Type": "application/json; charset=UTF-8"}
+
+        async with session.post(url, headers=message_headers, data=json.dumps(bot_message)) as response:
+            response = await response.json()
+
+            return response
+
+    async def _send_to_all_google_urls(self):
+        async with aiohttp.ClientSession() as session:
+            google_chat_response = []
+            for url in self.google_chat_webhook_urls:
+                google_chat_response.append(
+                    self._send_to_google_url(
+                        session,
+                        url,
+                    )
+                )
+            responses = await asyncio.gather(*google_chat_response, return_exceptions=True)
+            return responses
+
+    # ------------------------------------ #
+    # ---------- Public Methods ---------- #
+    # ------------------------------------ #
+
+    def send(self) -> list:
+        """Will send the message to the google chat webhooks.
+
+        Returns:
+            list: A list of requests responses as json representation.
+        """
+        return asyncio.run(self._send_to_all_google_urls())
