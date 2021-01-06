@@ -62,7 +62,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -81,24 +80,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This is a simple Python package to send messages to Google Chat via their *Incoming Webhooks* (https://developers.google.com/hangouts/chat/how-tos/webhooks).
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 ### Requirements
-The package uses the following requirements
+The package depends on the following packages:
 - [aiohttp](https://github.com/aio-libs/aiohttp)
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
