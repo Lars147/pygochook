@@ -7,16 +7,18 @@ import typing
 class MsgSender:
     """A class to send simply send messages via Google Chat Webhooks."""
 
-    def __init__(self, msg: str, google_chat_webhook_urls: typing.Union[str, list]):
+    def __init__(self, msg: str, google_chat_webhook_urls: typing.Union[str, list], connection_limit: int=100):
         """Send a message to one or multiple google chat webhook urls.
         It uses `aiohttp` and `asyncio` to send the requests in an async matter.
 
         Args:
             msg (str): [description]
             google_chat_webhook_urls (typing.Union[str, list]): [description]
+            connection_limit (int): The maximum number of connections. Defaults to 100.
         """
         self.google_chat_webhook_urls = google_chat_webhook_urls
         self.msg = msg
+        self.connection_limit = connection_limit
 
     # -------------------------------- #
     # ---------- Properties ---------- #
@@ -54,7 +56,8 @@ class MsgSender:
             return response
 
     async def _send_to_all_google_urls(self):
-        async with aiohttp.ClientSession() as session:
+        connector = aiohttp.TCPConnector(limit=self.connection_limit)
+        async with aiohttp.ClientSession(connector=connector) as session:
             google_chat_response = []
             for url in self.google_chat_webhook_urls:
                 google_chat_response.append(
