@@ -58,15 +58,15 @@ class MsgSender:
     async def _send_to_all_google_urls(self):
         connector = aiohttp.TCPConnector(limit=self.connection_limit)
         async with aiohttp.ClientSession(connector=connector) as session:
-            google_chat_response = []
+            google_chat_responses = []
             for url in self.google_chat_webhook_urls:
-                google_chat_response.append(
+                google_chat_responses.append(
                     self._send_to_google_url(
                         session,
                         url,
                     )
                 )
-            responses = await asyncio.gather(*google_chat_response, return_exceptions=True)
+            responses = await asyncio.gather(*google_chat_responses, return_exceptions=True)
             return responses
 
     # ------------------------------------ #
