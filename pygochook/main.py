@@ -1,6 +1,5 @@
 import aiohttp
 import asyncio
-import json
 import typing
 
 
@@ -50,7 +49,7 @@ class MsgSender:
 
         message_headers = {"Content-Type": "application/json; charset=UTF-8"}
 
-        async with session.post(url, headers=message_headers, data=json.dumps(bot_message)) as response:
+        async with session.post(url, headers=message_headers, json=bot_message) as response:
             response = await response.json()
 
             return response
