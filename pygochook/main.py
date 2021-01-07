@@ -12,8 +12,8 @@ class MsgSender:
         It uses `aiohttp` and `asyncio` to send the requests in an async matter.
 
         Args:
-            msg (str): [description]
-            google_chat_webhook_urls (typing.Union[str, list]): [description]
+            msg (str): The message to send to Google Chats.
+            google_chat_webhook_urls (typing.Union[str, list]): A single URL or list of URLs of Google Chat Incoming Webhooks.
             connection_limit (int): The maximum number of connections. Defaults to 100.
         """
         self.google_chat_webhook_urls = google_chat_webhook_urls
