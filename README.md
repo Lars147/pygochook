@@ -1,17 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** Lars147, pygochook, twitter_handle, larsheinen@gmail.com, PyGoChook, project_description
--->
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -36,7 +22,7 @@
   <h3 align="center">PyGoChook</h3>
 
   <p align="center">
-    A simple Python package for Google Chat Webhooks.
+    A simple Python wrapper to send message to Google Chats.
     <br />
     <a href="https://github.com/Lars147/pygochook"><strong>Explore the docs »</strong></a>
     <br />
@@ -176,8 +162,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
-
-Lars Heinen - larsheinen@gmail.com
 
 Project Link: [https://github.com/Lars147/pygochook](https://github.com/Lars147/pygochook)
 
