@@ -36,7 +36,7 @@ class MsgSender:
             url ([type]): [description]
         """
         if isinstance(url, list):
-            self._google_chat_webhook_urls = url
+            self._google_chat_webhook_urls = list(set(url))  # remove duplicates in the list
         else:
             self._google_chat_webhook_urls = [url]
 
