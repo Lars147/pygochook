@@ -80,7 +80,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a simple Python package to send messages to Google Chat via their *Incoming Webhooks* (https://developers.google.com/hangouts/chat/how-tos/webhooks).
+**Py**thon **Go**ogle **Ch**at Webh**ook** is a simple Python wrapper to send messages to **Google Chat** via their *Incoming Webhooks* (https://developers.google.com/hangouts/chat/how-tos/webhooks).
 As for now Google Chat is only available for **G Suite Customers**.
 
 <!-- GETTING STARTED -->
