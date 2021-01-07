@@ -24,15 +24,15 @@ class MsgSender:
     # -------------------------------- #
 
     @property
-    def google_chat_webhook_urls(self):
+    def google_chat_webhook_urls(self) -> list:
         return self._google_chat_webhook_urls
 
     @google_chat_webhook_urls.setter
-    def google_chat_webhook_urls(self, url):
-        """Will convert 
+    def google_chat_webhook_urls(self, url: typing.Union[str, list]) -> None:
+        """Will convert a single URL to a list if
 
         Args:
-            url ([type]): [description]
+            url (typing.Union[str, list]): A single URL or list of URLs of Google Chat Incoming Webhooks.
         """
         if isinstance(url, list):
             self._google_chat_webhook_urls = list(set(url))  # remove duplicates in the list
@@ -43,7 +43,16 @@ class MsgSender:
     # ---------- Private Methods ---------- #
     # ------------------------------------- #
 
-    async def _send_to_google_url(self, session, url):
+    async def _send_to_google_url(self, session: aiohttp.ClientSession, url: str):
+        """Will send the message to a Google Chat Webhook URL.
+
+        Args:
+            session (aiohttp.ClientSession): A ClientSession object from `aiohttp`.
+            url (str): A Google Chat Webhook URL.
+
+        Returns:
+            [type]: [description]
+        """
 
         bot_message = {"text": self.msg}
 
