@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pygochook-Lars147", # Replace with your own username
+    name="pygochook", # Replace with your own username
     version="0.0.1",
     author="Lars Heinen",
     author_email="larsheinen@gmail.com",
