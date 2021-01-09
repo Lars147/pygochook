@@ -70,8 +70,8 @@ As for now Google Chat is only available for **G Suite Customers**.
 ## Getting Started
 
 ### Requirements
-The package depends on the following packages:
 - [aiohttp](https://github.com/aio-libs/aiohttp)
+- Python 3.7 (only tested version)
 
 ### Installation
 
