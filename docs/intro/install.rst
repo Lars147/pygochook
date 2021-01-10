@@ -54,25 +54,9 @@ Virtual environments allow you to not conflict with already-installed Python
 system packages (which could break some of your system tools and scripts),
 and still install packages normally with ``pip`` (without ``sudo`` and the likes).
 
-See :ref:`tut-venv` on how to create your virtual environment.
-
 Once you have created a virtual environment, you can install PyGoChook inside it with ``pip``,
 just like any other Python package.
 
 
 .. _Python: https://www.python.org/
 .. _pip: https://pip.pypa.io/en/latest/installing/
-.. _lxml: https://lxml.de/index.html
-.. _parsel: https://pypi.org/project/parsel/
-.. _w3lib: https://pypi.org/project/w3lib/
-.. _twisted: https://twistedmatrix.com/trac/
-.. _cryptography: https://cryptography.io/en/latest/
-.. _pyOpenSSL: https://pypi.org/project/pyOpenSSL/
-.. _setuptools: https://pypi.python.org/pypi/setuptools
-.. _AUR PyGoChook package: https://aur.archlinux.org/packages/pygochook/
-.. _homebrew: https://brew.sh/
-.. _zsh: https://www.zsh.org/
-.. _Scrapinghub: https://scrapinghub.com
-.. _Anaconda: https://docs.anaconda.com/anaconda/
-.. _Miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
-.. _conda-forge: https://conda-forge.org/
