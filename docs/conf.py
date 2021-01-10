@@ -71,4 +71,4 @@ html_theme = 'alabaster'
 autoclass_content = 'both'
 
 # The major project version, used as the replacement for |version|
-version = 0.0
+version = "0.0"
