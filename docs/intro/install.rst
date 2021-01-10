@@ -13,7 +13,7 @@ PyGoChook requires Python 3.7+ (only tested on 3.7)
 
 
 Installing PyGoChook
-=================
+====================
 
 You can install PyGoChook and its dependencies from PyPI with::
 
