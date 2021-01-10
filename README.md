@@ -24,7 +24,7 @@
   <p align="center">
     A simple Python wrapper to send message to Google Chats.
     <br />
-    <a href="https://github.com/Lars147/pygochook"><strong>Explore the docs »</strong></a>
+    <a href="https://pygochook.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Lars147/pygochook">View Demo</a>
@@ -164,6 +164,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Project Link: [https://github.com/Lars147/pygochook](https://github.com/Lars147/pygochook)
+Documentation Link: [https://pygochook.readthedocs.io/en/latest/](https://pygochook.readthedocs.io/en/latest/)
 
 
 
