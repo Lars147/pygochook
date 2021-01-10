@@ -69,3 +69,6 @@ html_theme = 'alabaster'
 # html_static_path = ['_static']
 
 autoclass_content = 'both'
+
+# The major project version, used as the replacement for |version|
+version = 0.0
