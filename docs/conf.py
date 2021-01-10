@@ -12,13 +12,14 @@
 #
 import os
 import sys
+from datetime import datetime
 sys.path.insert(0, os.path.relpath('../pygochook/'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'PyGoChook'
-copyright = '2021, Lars Heinen'
+copyright = f'{datetime.now().year}, Lars Heinen'
 author = 'Lars Heinen'
 
 # The full version, including alpha/beta/rc tags
