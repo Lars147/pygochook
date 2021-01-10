@@ -51,7 +51,7 @@ Basic concepts
    topics/main
 
 :doc:`topics/main`
-    Learn about the command-line tool used to manage your Scrapy project.
+    Learn about what runs PyGoChook.
 
 
 Solving specific problems
