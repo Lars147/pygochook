@@ -44,7 +44,7 @@ An example::
     ... 
     >>> message = "Time does not even matter!"
     >>> url = "https://chat.googleapis.com/..."
-    >>> urls = [
+    >>> multiple_urls = [
     ...     "https://chat.googleapis.com/...",
     ...     ...,
     ...     ...,
@@ -54,7 +54,7 @@ An example::
     >>> to_one_chat(message, url)   # send to one chat
     Total execution time: 454 ms
     >>>
-    >>> to_multi_chat(message, url)   # send to 10 chats
+    >>> to_multi_chat(message, multiple_urls)   # send to 10 chats
     Total execution time: 2007 ms
 
 

@@ -121,12 +121,12 @@ With the use of `aiohttp` the requests will be performed asynchronously. Hence, 
 ... 
 >>> message = "Time does not even matter!"
 >>> url = "https://chat.googleapis.com/..."
->>> urls = ["https://chat.googleapis.com/...", ..., "https://chat.googleapis.com/..."]  # 10 Chat API-URLs
+>>> multiple_urls = ["https://chat.googleapis.com/...", ..., "https://chat.googleapis.com/..."]  # 10 Chat API-URLs
 >>>
 >>> to_one_chat(message, url)   # send to one chat
 Total execution time: 454 ms
 >>>
->>> to_multi_chat(message, url)   # send to 10 chats
+>>> to_multi_chat(message, multiple_urls)   # send to 10 chats
 Total execution time: 2007 ms
 ```
 
